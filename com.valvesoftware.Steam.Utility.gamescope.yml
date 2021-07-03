@@ -21,8 +21,8 @@ modules:
     sources: &gamescope-sources
       - type: git
         url: https://github.com/Plagman/gamescope.git
-        tag: 3.7.1
-        commit: c9d0b5db4c21f4a783b6fbe7da1bc97c11694b02
+        tag: 3.8.4
+        commit: 9842f2f807dd9e5a4fa8747ee10c3d64fea622c1
 
   - name: metadata
     buildsystem: simple

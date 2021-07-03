@@ -11,8 +11,8 @@ config-opts:
 sources:
 - type: git
   url: https://gitlab.freedesktop.org/xorg/xserver.git
-  tag: xwayland-21.1.1
-  commit: d4cc2e2db99a1b07c6f14a16abb209bfa6d85678
+  tag: xwayland-21.1.1.901
+  commit: bfd7e302fcc33b95216a9fedb52e91c5cb51e1cf
 modules:
 - name: fontutil
   buildsystem: autotools
@@ -38,6 +38,13 @@ modules:
     url: https://gitlab.freedesktop.org/xorg/lib/libxfont.git
     tag: libXfont2-2.0.3
     commit: cdb2f990348c3bd1407022f7e0e5fcba552d539f
+- name: xres
+  buildsystem: autotools
+  sources:
+  - type: git
+    url: https://gitlab.freedesktop.org/xorg/lib/libxres.git
+    tag: libXres-1.2.1
+    commit: c05c6d918b0e2011d4bfa370c321482e34630b17
 - name: tirpc
   buildsystem: autotools
   config-opts:
