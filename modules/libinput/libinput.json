@@ -14,8 +14,8 @@
     "sources": [
         {
             "type": "archive",
-            "url": "https://www.freedesktop.org/software/libinput/libinput-1.16.4.tar.xz",
-            "sha256": "65923a06d5a8970e4a999c4668797b9b689614b62b1d44432ab1c87b65e39e29"
+            "url": "https://www.freedesktop.org/software/libinput/libinput-1.19.0.tar.xz",
+            "sha256": "3d3a2f12b4a65cd82684121ae4b33cdc3ad541c761a55e8eb73a8e5e443cccbb"
         }
     ],
     "modules": [
