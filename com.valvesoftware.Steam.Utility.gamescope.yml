@@ -13,6 +13,7 @@ build-options:
 modules:
   - modules/libinput/libinput.json
   - modules/xwayland/xwayland.yml
+  - modules/libseat/libseat.yml
 
   - name: gamescope
     build-options:
