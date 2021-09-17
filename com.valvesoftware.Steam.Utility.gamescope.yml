@@ -1,6 +1,6 @@
 id: com.valvesoftware.Steam.Utility.gamescope
 default-branch: stable
-sdk: org.freedesktop.Sdk//20.08
+sdk: org.freedesktop.Sdk//21.08
 runtime: com.valvesoftware.Steam
 runtime-version: stable
 build-extension: true
