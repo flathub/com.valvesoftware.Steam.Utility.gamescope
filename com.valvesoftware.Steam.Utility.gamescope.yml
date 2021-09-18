@@ -1,6 +1,6 @@
 id: com.valvesoftware.Steam.Utility.gamescope
 default-branch: stable
-sdk: org.freedesktop.Sdk//20.08
+sdk: org.freedesktop.Sdk//21.08
 runtime: com.valvesoftware.Steam
 runtime-version: stable
 build-extension: true
@@ -13,16 +13,25 @@ build-options:
 modules:
   - modules/libinput/libinput.json
   - modules/xwayland/xwayland.yml
+  - modules/libseat/libseat.yml
 
   - name: gamescope
+    config-opts:
+      - --wrap-mode=nodownload
     build-options:
       libdir: lib/x86_64-linux-gnu
     buildsystem: meson
     sources: &gamescope-sources
       - type: git
         url: https://github.com/Plagman/gamescope.git
-        tag: 3.8.4
-        commit: 9842f2f807dd9e5a4fa8747ee10c3d64fea622c1
+        tag: 3.9.2
+        commit: a15ea54ca3964f2438352b288e57dee86891b9fa
+      - type: git
+        url: https://github.com/nothings/stb.git
+        dest: subprojects/stb
+      - type: shell
+        commands:
+          - install -t subprojects/stb subprojects/packagefiles/stb/*
 
   - name: metadata
     buildsystem: simple
