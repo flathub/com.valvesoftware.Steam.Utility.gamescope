@@ -28,6 +28,7 @@ modules:
         commit: a15ea54ca3964f2438352b288e57dee86891b9fa
       - type: git
         url: https://github.com/nothings/stb.git
+        commit: af1a5bc352164740c1cc1354942b1c6b72eacb8a # Should be updated when updating gamescope
         dest: subprojects/stb
       - type: shell
         commands:
