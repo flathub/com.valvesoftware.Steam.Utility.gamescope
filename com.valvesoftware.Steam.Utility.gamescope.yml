@@ -5,6 +5,9 @@ runtime: com.valvesoftware.Steam
 runtime-version: stable
 build-extension: true
 appstream-compose: false
+sdk-extensions:
+  - org.freedesktop.Sdk.Compat.i386
+  - org.freedesktop.Sdk.Extension.toolchain-i386
 build-options:
   prefix: /app/utils/gamescope
   prepend-path: /app/utils/gamescope/bin
