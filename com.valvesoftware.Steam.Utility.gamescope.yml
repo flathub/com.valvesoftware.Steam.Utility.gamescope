@@ -24,8 +24,8 @@ modules:
     sources: &gamescope-sources
       - type: git
         url: https://github.com/Plagman/gamescope.git
-        tag: 3.9.5
-        commit: 26aeebf11d2d195fd2fa75f0d85d11dcd3ee5e69
+        tag: 3.10.7
+        commit: d22003025c0d26839621fb17d5657859cd518889
       - type: git
         url: https://github.com/nothings/stb.git
         commit: af1a5bc352164740c1cc1354942b1c6b72eacb8a # Should be updated when updating gamescope
@@ -38,7 +38,8 @@ modules:
     buildsystem: simple
     build-commands:
       - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo ${FLATPAK_ID}.metainfo.xml
-      - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak ${FLATPAK_ID}
+      - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak
+      ${FLATPAK_ID}
     sources:
       - type: file
         path: com.valvesoftware.Steam.Utility.gamescope.metainfo.xml
