@@ -5,14 +5,13 @@ runtime: com.valvesoftware.Steam
 runtime-version: stable
 build-extension: true
 appstream-compose: false
-sdk-extensions:
-  - org.freedesktop.Sdk.Compat.i386
-  - org.freedesktop.Sdk.Extension.toolchain-i386
+
 build-options:
   prefix: /app/utils/gamescope
   prepend-path: /app/utils/gamescope/bin
   append-pkg-config-path: /app/utils/gamescope/lib/pkgconfig
   strip: true
+
 modules:
   - modules/libinput/libinput.json
   - modules/xwayland/xwayland.yml
@@ -29,13 +28,24 @@ modules:
         url: https://github.com/Plagman/gamescope.git
         tag: 3.10.7
         commit: d22003025c0d26839621fb17d5657859cd518889
+        x-checker-data:
+          type: git
+          version-scheme: semantic
+          tag-pattern: ""
+      
       - type: git
         url: https://github.com/nothings/stb.git
         commit: af1a5bc352164740c1cc1354942b1c6b72eacb8a  ##> Should be updated when updating gamescope <##
         dest: subprojects/stb
+        x-checker-data:
+          type: git
+          version-scheme: semantic
+          tag-pattern: ""
+      
       - type: shell
         commands:
           - install -t subprojects/stb subprojects/packagefiles/stb/*
+
 
   - name: metadata
     buildsystem: simple
