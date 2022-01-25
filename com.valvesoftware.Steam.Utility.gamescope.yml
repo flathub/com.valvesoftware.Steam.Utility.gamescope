@@ -1,5 +1,5 @@
 id: com.valvesoftware.Steam.Utility.gamescope
-default-branch: stable
+branch: stable
 sdk: org.freedesktop.Sdk//21.08
 runtime: com.valvesoftware.Steam
 runtime-version: stable
@@ -39,7 +39,7 @@ modules:
     build-commands:
       - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo ${FLATPAK_ID}.metainfo.xml
       - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak
-      ${FLATPAK_ID}
+        ${FLATPAK_ID}
     sources:
       - type: file
         path: com.valvesoftware.Steam.Utility.gamescope.metainfo.xml
