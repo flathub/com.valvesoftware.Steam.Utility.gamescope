@@ -1,9 +1,0 @@
-name: Update Dependencies
-on:
-  schedule:
-  - cron: "0 3 * * 0"
-jobs:
-  Update_Dependencies:
-    name: Update Dependencies not easily supported by x-checker-data.  e.g. github.com/nothings/stb
-    runs-on: ubuntu-latest
-    
