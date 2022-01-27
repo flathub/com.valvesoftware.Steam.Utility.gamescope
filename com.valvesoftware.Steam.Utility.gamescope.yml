@@ -25,7 +25,13 @@ modules:
       - type: git
         url: https://github.com/Plagman/gamescope.git
         tag: 3.10.7
-        commit: d22003025c0d26839621fb17d5657859cd518889
+        x-checker-data:
+          type: git
+          version-scheme: semantic
+          tag-pattern: "^([0-9]+.[0-9]+.[0-9]+)$"
+      - type: git
+        url: https://gitlab.freedesktop.org/wayland/wayland.git
+        tag: 1.20.0
         x-checker-data:
           type: git
           version-scheme: semantic
