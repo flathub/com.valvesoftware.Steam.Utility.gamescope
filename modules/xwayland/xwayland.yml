@@ -11,9 +11,16 @@ config-opts:
 sources:
 - type: git
   url: https://gitlab.freedesktop.org/xorg/xserver.git
-  tag: xwayland-21.1.2
-  commit: 1dbb96ae48f1fa69752e71f25f03d2f733918ffb
+  tag: xwayland-21.1.4
+  commit: fbc03d7e486e8c1e33f0c2d3ff9ed415c95de166
 modules:
+- name: libdrm
+  buildsystem: meson
+  sources:
+  - type: git
+    url: https://gitlab.freedesktop.org/mesa/drm
+    tag: libdrm-2.4.109
+    commit: febfe0addd51a48c7c9dd7fd9ddf9b5a3b5cd7c6
 - name: fontutil
   buildsystem: autotools
   sources:
