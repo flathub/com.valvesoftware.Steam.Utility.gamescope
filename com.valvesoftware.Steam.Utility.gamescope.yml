@@ -24,8 +24,8 @@ modules:
     sources: &gamescope-sources
       - type: git
         url: https://github.com/Plagman/gamescope.git
-        tag: 3.11.5
-        commit: 04e9eaebe3feffa4bd5acc0c942bf7542577f5bf
+        tag: 3.11.19
+        commit: b471a05d8a60d89a1436002ee653e407f234f121
       - type: git
         url: https://github.com/nothings/stb.git
         commit: af1a5bc352164740c1cc1354942b1c6b72eacb8a # Should be updated when updating gamescope
