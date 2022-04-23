@@ -14,8 +14,8 @@
     "sources": [
         {
             "type": "archive",
-            "url": "https://www.freedesktop.org/software/libinput/libinput-1.19.0.tar.xz",
-            "sha256": "3d3a2f12b4a65cd82684121ae4b33cdc3ad541c761a55e8eb73a8e5e443cccbb"
+            "url": "https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.20.1/libinput-1.20.1.tar.bz2",
+            "sha256": "08c003f724f361ed21f4dfbfe755a6c115b85385f1418907bb98f185457273f0"
         }
     ],
     "modules": [
@@ -39,8 +39,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.freedesktop.org/software/libevdev/libevdev-1.11.0.tar.xz",
-                    "sha256": "63f4ea1489858a109080e0b40bd43e4e0903a1e12ea888d581db8c495747c2d0"
+                    "url": "https://www.freedesktop.org/software/libevdev/libevdev-1.12.1.tar.xz",
+                    "sha256": "1dbba41bc516d3ca7abc0da5b862efe3ea8a7018fa6e9b97ce9d39401b22426c"
                 }
             ]
         }

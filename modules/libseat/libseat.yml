@@ -10,5 +10,5 @@ build-options:
 sources:
 - type: git
   url: https://git.sr.ht/~kennylevinsen/seatd
-  tag: 0.6.2
-  commit: 0f20175752b7b11a5c66070b2dedc4cf8716d107
+  tag: 0.6.4
+  commit: df13d03f9cfd0dc0c2b3298cd0e5eb4e4a10835e 
