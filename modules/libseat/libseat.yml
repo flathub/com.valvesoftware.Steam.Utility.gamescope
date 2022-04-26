@@ -11,4 +11,7 @@ sources:
 - type: git
   url: https://git.sr.ht/~kennylevinsen/seatd
   tag: 0.6.4
-  commit: df13d03f9cfd0dc0c2b3298cd0e5eb4e4a10835e 
+  commit: df13d03f9cfd0dc0c2b3298cd0e5eb4e4a10835e
+  x-checker-data:
+    type: git
+    tag-pattern: ^([\d.]+)$
