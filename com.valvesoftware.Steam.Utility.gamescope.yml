@@ -29,6 +29,7 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
+          is-main-source: true
       - type: git
         url: https://github.com/nothings/stb.git
         branch: master
