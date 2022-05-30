@@ -15,3 +15,5 @@ sources:
   x-checker-data:
     type: git
     tag-pattern: ^([\d.]+)$
+    versions:
+      "<": 0.7.0
