@@ -21,13 +21,18 @@ modules:
     build-options:
       libdir: lib/x86_64-linux-gnu
     buildsystem: meson
-    sources: &gamescope-sources
+    sources:
       - type: git
         url: https://github.com/Plagman/gamescope.git
-        tag: 3.11.28
-        commit: 3b719fe304a40af5e78bb4c00752a9ad309839fa
+        tag: 3.11.30
+        commit: 91a549de79570bc6dc63eff8cc72df9dcd2e17bb
+        x-checker-data:
+          type: git
+          tag-pattern: ^([\d.]+)$
+          is-main-source: true
       - type: git
         url: https://github.com/nothings/stb.git
+        branch: master
         commit: af1a5bc352164740c1cc1354942b1c6b72eacb8a # Should be updated when updating gamescope
         dest: subprojects/stb
       - type: shell
@@ -38,7 +43,8 @@ modules:
     buildsystem: simple
     build-commands:
       - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo ${FLATPAK_ID}.metainfo.xml
-      - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak ${FLATPAK_ID}
+      - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak
+        ${FLATPAK_ID}
     sources:
       - type: file
         path: com.valvesoftware.Steam.Utility.gamescope.metainfo.xml

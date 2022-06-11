@@ -1,81 +1,116 @@
----
 name: xwayland
 buildsystem: meson
 build-options:
-  prefix: "/app/utils/gamescope/"
-  append-pkg-config-path: "/app/utils/gamescope/lib/pkgconfig"
+  prefix: /app/utils/gamescope/
+  append-pkg-config-path: /app/utils/gamescope/lib/pkgconfig
   env:
-    ACLOCAL_PATH: "/app/share/aclocal:/app/utils/gamescope/share/aclocal"
+    ACLOCAL_PATH: /app/share/aclocal:/app/utils/gamescope/share/aclocal
 config-opts:
-- "-Dxvfb=false"
+  - -Dxvfb=false
 sources:
-- type: git
-  url: https://gitlab.freedesktop.org/xorg/xserver.git
-  tag: xwayland-22.1.1
-  commit: 2bddb5add1966cf75be2076838f28369a0fe2028
+  - type: git
+    url: https://gitlab.freedesktop.org/xorg/xserver.git
+    tag: xwayland-22.1.2
+    commit: daaa9f056602e43b132f9e6e035cc54b6a1c96a3
+    x-checker-data:
+      type: git
+      tag-pattern: ^xwayland-([\d.]+)$
 modules:
-- name: libdrm
-  buildsystem: meson
-  sources:
-  - type: git
-    url: https://gitlab.freedesktop.org/mesa/drm
-    tag: libdrm-2.4.110
-    commit: 56f81e6776c1c100c3f627b2c1feb9dcae2aad3c
-- name: fontutil
-  buildsystem: autotools
-  sources:
-  - type: git
-    url: https://gitlab.freedesktop.org/xorg/font/util.git
-    tag: font-util-1.3.2
-    commit: d45011b8324fecebb4fc79e57491d341dd96e325
-- name: fontenc
-  buildsystem: autotools
-  build-options:
-    env:
-      ACLOCAL_PATH: "/app/share/aclocal:/app/utils/gamescope/share/aclocal"
-  sources:
-  - type: git
-    url: https://gitlab.freedesktop.org/xorg/lib/libfontenc.git
-    tag: libfontenc-1.1.4
-    commit: 2baea13978759d1a011fc6d739465893b554d30a
-- name: xfont2
-  buildsystem: autotools
-  sources:
-  - type: git
-    url: https://gitlab.freedesktop.org/xorg/lib/libxfont.git
-    tag: libXfont2-2.0.5
-    commit: 3a4f68284c5aeea77789af1fe395cac35efc8562
-- name: xres
-  buildsystem: autotools
-  sources:
-  - type: git
-    url: https://gitlab.freedesktop.org/xorg/lib/libxres.git
-    tag: libXres-1.2.1
-    commit: c05c6d918b0e2011d4bfa370c321482e34630b17
-- name: libxcvt
-  buildsystem: meson
-  sources:
-  - type: git
-    url: https://gitlab.freedesktop.org/xorg/lib/libxcvt.git
-    tag: libxcvt-0.1.1
-    commit: 6fe840b9295cfdc41bd734586c5b8756f6af6f9b 
-- name: tirpc
-  buildsystem: autotools
-  config-opts:
-  - "--disable-gssapi"
-  sources:
-  - type: archive
-    url: https://sourceforge.net/projects/libtirpc/files/libtirpc/1.3.2/libtirpc-1.3.2.tar.bz2
-    sha256: e24eb88b8ce7db3b7ca6eb80115dd1284abc5ec32a8deccfed2224fc2532b9fd
-- name: libmd
-  sources:
-  - type: archive
-    url: 'https://archive.hadrons.org/software/libmd/libmd-1.0.4.tar.xz'
-    mirror-urls:
-      - 'https://libbsd.freedesktop.org/releases/libmd-1.0.4.tar.xz'
-    sha256: f51c921042e34beddeded4b75557656559cf5b1f2448033b4c1eec11c07e530f
-- name: libbsd
-  sources:
-  - type: archive
-    url: 'https://libbsd.freedesktop.org/releases/libbsd-0.11.6.tar.xz'
-    sha256: 19b38f3172eaf693e6e1c68714636190c7e48851e45224d720b3b5bc0499b5df
+  - name: libdrm
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://gitlab.freedesktop.org/mesa/drm.git
+        tag: libdrm-2.4.110
+        commit: 56f81e6776c1c100c3f627b2c1feb9dcae2aad3c
+        x-checker-data:
+          type: git
+          tag-pattern: ^libdrm-([\d.]+)$
+  - name: fontutil
+    buildsystem: autotools
+    sources:
+      - type: git
+        url: https://gitlab.freedesktop.org/xorg/font/util.git
+        tag: font-util-1.3.2
+        commit: d45011b8324fecebb4fc79e57491d341dd96e325
+        x-checker-data:
+          type: git
+          tag-pattern: ^font-util-([\d.]+)$
+  - name: fontenc
+    buildsystem: autotools
+    build-options:
+      env:
+        ACLOCAL_PATH: /app/share/aclocal:/app/utils/gamescope/share/aclocal
+    sources:
+      - type: git
+        url: https://gitlab.freedesktop.org/xorg/lib/libfontenc.git
+        tag: libfontenc-1.1.4
+        commit: 2baea13978759d1a011fc6d739465893b554d30a
+        x-checker-data:
+          type: git
+          tag-pattern: ^libfontenc-([\d.]+)$
+  - name: xfont2
+    buildsystem: autotools
+    sources:
+      - type: git
+        url: https://gitlab.freedesktop.org/xorg/lib/libxfont.git
+        tag: libXfont2-2.0.5
+        commit: 3a4f68284c5aeea77789af1fe395cac35efc8562
+        x-checker-data:
+          type: git
+          tag-pattern: ^libXfont2-([\d.]+)$
+  - name: xres
+    buildsystem: autotools
+    sources:
+      - type: git
+        url: https://gitlab.freedesktop.org/xorg/lib/libxres.git
+        tag: libXres-1.2.1
+        commit: c05c6d918b0e2011d4bfa370c321482e34630b17
+        x-checker-data:
+          type: git
+          tag-pattern: ^libXres-([\d.]+)$
+  - name: libxcvt
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://gitlab.freedesktop.org/xorg/lib/libxcvt.git
+        tag: libxcvt-0.1.1
+        commit: 6fe840b9295cfdc41bd734586c5b8756f6af6f9b
+        x-checker-data:
+          type: git
+          tag-pattern: ^libxcvt-([\d.]+)$
+  - name: tirpc
+    buildsystem: autotools
+    config-opts:
+      - --disable-gssapi
+    sources:
+      - type: archive
+        url: https://sourceforge.net/projects/libtirpc/files/libtirpc/1.3.2/libtirpc-1.3.2.tar.bz2
+        sha256: e24eb88b8ce7db3b7ca6eb80115dd1284abc5ec32a8deccfed2224fc2532b9fd
+        x-checker-data:
+          type: anitya
+          project-id: 1740
+          stable-only: true
+          url-template: https://sourceforge.net/projects/libtirpc/files/libtirpc/$version/libtirpc-$version.tar.bz2
+  - name: libmd
+    sources:
+      - type: archive
+        url: https://archive.hadrons.org/software/libmd/libmd-1.0.4.tar.xz
+        mirror-urls:
+          - https://libbsd.freedesktop.org/releases/libmd-1.0.4.tar.xz
+        sha256: f51c921042e34beddeded4b75557656559cf5b1f2448033b4c1eec11c07e530f
+        x-checker-data:
+          type: anitya
+          project-id: 15525
+          stable-only: true
+          url-template: https://archive.hadrons.org/software/libmd/libmd-$version.tar.xz
+  - name: libbsd
+    sources:
+      - type: archive
+        url: https://libbsd.freedesktop.org/releases/libbsd-0.11.6.tar.xz
+        sha256: 19b38f3172eaf693e6e1c68714636190c7e48851e45224d720b3b5bc0499b5df
+        x-checker-data:
+          type: anitya
+          project-id: 1567
+          stable-only: true
+          url-template: https://libbsd.freedesktop.org/releases/libbsd-$version.tar.xz
