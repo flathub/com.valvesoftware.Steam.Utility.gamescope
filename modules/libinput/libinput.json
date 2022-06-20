@@ -1,9 +1,9 @@
 {
     "name": "libinput",
     "buildsystem": "meson",
-    "build-options" : {
-        "prefix" : "/app/utils/gamescope/",
-        "append-pkg-config-path" : "/app/utils/gamescope/lib/pkgconfig"
+    "build-options": {
+        "prefix": "/app/utils/gamescope/",
+        "append-pkg-config-path": "/app/utils/gamescope/lib/pkgconfig"
     },
     "config-opts": [
         "-Dlibwacom=false",
@@ -15,8 +15,8 @@
         {
             "type": "git",
             "url": "https://gitlab.freedesktop.org/libinput/libinput.git",
-            "commit": "562f7bcee0bf513824d30be31e2a64c40d5f2ee1",
-            "tag": "1.20.1",
+            "commit": "bc363328a704b3c5e0ee2f0fcf088de67c708979",
+            "tag": "1.21.0",
             "x-checker-data": {
                 "type": "git",
                 "tag-pattern": "^([\\d.]+)$"
