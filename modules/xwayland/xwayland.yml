@@ -74,8 +74,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/xorg/lib/libxcvt.git
-        tag: libxcvt-0.1.1
-        commit: 6fe840b9295cfdc41bd734586c5b8756f6af6f9b
+        tag: libxcvt-0.1.2
+        commit: d9ca87eea9eecddaccc3a77227bcb3acf84e89df
         x-checker-data:
           type: git
           tag-pattern: ^libxcvt-([\d.]+)$
