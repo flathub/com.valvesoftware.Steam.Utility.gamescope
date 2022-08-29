@@ -44,8 +44,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/xorg/lib/libfontenc.git
-        tag: libfontenc-1.1.4
-        commit: 2baea13978759d1a011fc6d739465893b554d30a
+        tag: libfontenc-1.1.5
+        commit: 26ae989526a2c931d15a4c4ae2e84ab627bc0009
         x-checker-data:
           type: git
           tag-pattern: ^libfontenc-([\d.]+)$
@@ -54,8 +54,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/xorg/lib/libxfont.git
-        tag: libXfont2-2.0.5
-        commit: 3a4f68284c5aeea77789af1fe395cac35efc8562
+        tag: libXfont2-2.0.6
+        commit: d54aaf2483df6a1f98fadc09004157e657b7f73e
         x-checker-data:
           type: git
           tag-pattern: ^libXfont2-([\d.]+)$
