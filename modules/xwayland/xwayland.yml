@@ -21,8 +21,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/mesa/drm.git
-        tag: libdrm-2.4.112
-        commit: 60cf6bcef1390473419df14e3214da149dbd8f99
+        tag: libdrm-2.4.113
+        commit: fb5c0c301aa9b6d984ffee522775ca19ea7c7be6
         x-checker-data:
           type: git
           tag-pattern: ^libdrm-([\d.]+)$
@@ -44,8 +44,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/xorg/lib/libfontenc.git
-        tag: libfontenc-1.1.5
-        commit: 26ae989526a2c931d15a4c4ae2e84ab627bc0009
+        tag: libfontenc-1.1.6
+        commit: c8f8ce35a5eafe8ca0d1ed3dfdd098fe0943b99c
         x-checker-data:
           type: git
           tag-pattern: ^libfontenc-([\d.]+)$
