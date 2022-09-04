@@ -1,19 +1,16 @@
----
 name: libseat
 buildsystem: meson
 config-opts:
-  - "-Dlibseat-seatd=disabled"
-  - "-Dserver=disabled"
+  - -Dlibseat-seatd=disabled
+  - -Dserver=disabled
 build-options:
-  prefix: "/app/utils/gamescope/"
-  append-pkg-config-path: "/app/utils/gamescope/lib/pkgconfig"
+  prefix: /app/utils/gamescope/
+  append-pkg-config-path: /app/utils/gamescope/lib/pkgconfig
 sources:
-- type: git
-  url: https://git.sr.ht/~kennylevinsen/seatd
-  tag: 0.6.4
-  commit: df13d03f9cfd0dc0c2b3298cd0e5eb4e4a10835e
-  x-checker-data:
-    type: git
-    tag-pattern: ^([\d.]+)$
-    versions:
-      "<": 0.7.0
+  - type: git
+    url: https://git.sr.ht/~kennylevinsen/seatd
+    tag: 0.7.0
+    commit: a803ba0502cccf147eec7fbcacd11c5b8643c0e0
+    x-checker-data:
+      type: git
+      tag-pattern: ^([\d.]+)$
