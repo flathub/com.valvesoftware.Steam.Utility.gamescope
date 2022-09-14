@@ -24,8 +24,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/Plagman/gamescope.git
-        tag: 3.11.43
-        commit: c5269642a293ce5e91d3d644ee15a3f3bcc3c5f3
+        tag: 3.11.44
+        commit: 40cbcd87ef32d879e44b968618d4cf5d1850904d
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
@@ -33,7 +33,7 @@ modules:
       - type: git
         url: https://github.com/nothings/stb.git
         branch: master
-        commit: af1a5bc352164740c1cc1354942b1c6b72eacb8a # Should be updated when updating gamescope
+        commit: 8b5f1f37b5b75829fc72d38e7b5d4bcbf8a26d55 # Should be updated when updating gamescope
         dest: subprojects/stb
       - type: shell
         commands:
