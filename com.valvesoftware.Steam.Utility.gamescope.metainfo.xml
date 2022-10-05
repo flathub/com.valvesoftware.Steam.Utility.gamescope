@@ -9,6 +9,7 @@
   <project_license>BSD-2-Clause</project_license>
   <metadata_license>CC0-1.0</metadata_license>
   <releases>
+    <release version="3.11.47" date="2022-10-05"/>
     <release version="3.11.45" date="2022-09-27"/>
     <release version="3.11.43" date="2022-08-29"/>
     <release version="3.11.39" date="2022-08-21"/>
