@@ -24,8 +24,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/Plagman/gamescope.git
-        tag: 3.11.45
-        commit: 215a19b0e80cfeb6219c752fcfcf719d5c913432
+        tag: 3.11.47
+        commit: b87660561fd3b48e55a26febac4aa5cd6b459172
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
