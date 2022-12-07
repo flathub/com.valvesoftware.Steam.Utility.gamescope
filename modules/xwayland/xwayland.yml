@@ -64,8 +64,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/xorg/lib/libxres.git
-        tag: libXres-1.2.1
-        commit: c05c6d918b0e2011d4bfa370c321482e34630b17
+        tag: libXres-1.2.2
+        commit: f77165c819b05af27d9878efe8526a157f569b1a
         x-checker-data:
           type: git
           tag-pattern: ^libXres-([\d.]+)$
