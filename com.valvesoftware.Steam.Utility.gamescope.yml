@@ -33,7 +33,7 @@ modules:
       - type: git
         url: https://github.com/nothings/stb.git
         branch: master
-        commit: 8b5f1f37b5b75829fc72d38e7b5d4bcbf8a26d55 # Should be updated when updating gamescope
+        commit: 6199bf77130da41fd424722eeb7a8db4d766c4c6 # Should be updated when updating gamescope
         dest: subprojects/stb
       - type: shell
         commands:
