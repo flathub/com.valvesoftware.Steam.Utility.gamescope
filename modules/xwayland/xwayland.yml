@@ -10,8 +10,8 @@ config-opts:
 sources:
   - type: git
     url: https://gitlab.freedesktop.org/xorg/xserver.git
-    tag: xwayland-22.1.7
-    commit: ef2e1be3fbbfe9e89010dfe9c3ac4e50b7eec161
+    tag: xwayland-23.1.1
+    commit: f03dd41290acb56bc229f4d290b0b112e13321aa
     x-checker-data:
       type: git
       tag-pattern: ^xwayland-([\d.]+)$
@@ -21,8 +21,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/mesa/drm.git
-        tag: libdrm-2.4.114
-        commit: b9ca37b3134861048986b75896c0915cbf2e97f9
+        tag: libdrm-2.4.115
+        commit: ee558cea20d1f9d822fe1a28e97beaf365bf9d38
         x-checker-data:
           type: git
           tag-pattern: ^libdrm-([\d.]+)$
