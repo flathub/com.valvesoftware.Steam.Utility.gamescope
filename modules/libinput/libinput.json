@@ -15,8 +15,8 @@
         {
             "type": "git",
             "url": "https://gitlab.freedesktop.org/libinput/libinput.git",
-            "commit": "fc59e574e050c502c9a3adefacf97babf3d09c7a",
-            "tag": "1.22.0",
+            "commit": "0b005eb64b12603e65a620a77c67ec62fd03f413",
+            "tag": "1.23.0",
             "x-checker-data": {
                 "type": "git",
                 "tag-pattern": "^([\\d.]+)$"
