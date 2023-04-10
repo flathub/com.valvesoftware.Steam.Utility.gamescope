@@ -4,8 +4,8 @@
   <extends>com.valvesoftware.Steam</extends>
   <name>gamescope</name>
   <summary>The micro-compositor formerly known as steamcompmgr</summary>
-  <url type="homepage">https://github.com/Plagman/gamescope</url>
-  <url type="bugtracker">https://github.com/Plagman/gamescope/issues</url>
+  <url type="homepage">https://github.com/ValveSoftware/gamescope</url>
+  <url type="bugtracker">https://github.com/ValveSoftware/gamescope/issues</url>
   <project_license>BSD-2-Clause</project_license>
   <metadata_license>CC0-1.0</metadata_license>
   <releases>
