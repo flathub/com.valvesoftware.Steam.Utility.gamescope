@@ -10,8 +10,8 @@ config-opts:
 sources:
   - type: git
     url: https://gitlab.freedesktop.org/xorg/xserver.git
-    tag: xwayland-22.1.7
-    commit: ef2e1be3fbbfe9e89010dfe9c3ac4e50b7eec161
+    tag: xwayland-23.1.1
+    commit: f03dd41290acb56bc229f4d290b0b112e13321aa
     x-checker-data:
       type: git
       tag-pattern: ^xwayland-([\d.]+)$
@@ -31,8 +31,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/xorg/font/util.git
-        tag: font-util-1.3.3
-        commit: 2ef6b22ad908c024b6c2fbde5c1de62123f82dc2
+        tag: font-util-1.4.0
+        commit: eee69c3f26f8e5d7f97599185d8d009f7fd76a7c
         x-checker-data:
           type: git
           tag-pattern: ^font-util-([\d.]+)$
