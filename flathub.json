@@ -1,5 +1,7 @@
 {
   "only-arches": ["x86_64"],
   "skip-icons-check": true,
-  "automerge-flathubbot-prs": false
+  "automerge-flathubbot-prs": false,
+  "end-of-life": "The gamescope Flatpak has been migrated to org.freedesktop.Platform.VulkanLayer.gamescope.",
+  "end-of-life-rebase": "org.freedesktop.Platform.VulkanLayer.gamescope"
 }
