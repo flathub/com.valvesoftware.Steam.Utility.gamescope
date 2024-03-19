@@ -2,7 +2,7 @@
 <component type="addon">
   <id>com.valvesoftware.Steam.Utility.gamescope</id>
   <extends>com.valvesoftware.Steam</extends>
-  <name>gamescope</name>
+  <name>gamescope (DEPRECATED: install org.freedesktop.Platform.VulkanLayer.gamescope)</name>
   <summary>The micro-compositor formerly known as steamcompmgr</summary>
   <url type="homepage">https://github.com/ValveSoftware/gamescope</url>
   <url type="bugtracker">https://github.com/ValveSoftware/gamescope/issues</url>

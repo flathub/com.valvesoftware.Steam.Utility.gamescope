@@ -5,39 +5,39 @@ runtime: com.valvesoftware.Steam
 runtime-version: stable
 build-extension: true
 appstream-compose: false
-build-options:
-  prefix: /app/utils/gamescope
-  prepend-path: /app/utils/gamescope/bin
-  append-pkg-config-path: /app/utils/gamescope/lib/pkgconfig
-  strip: true
+#build-options:
+#  prefix: /app/utils/gamescope
+#  prepend-path: /app/utils/gamescope/bin
+#  append-pkg-config-path: /app/utils/gamescope/lib/pkgconfig
+#  strip: true
 modules:
-  - modules/libinput/libinput.json
-  - modules/xwayland/xwayland.yml
-  - modules/libseat/libseat.yml
+#  - modules/libinput/libinput.json
+#  - modules/xwayland/xwayland.yml
+#  - modules/libseat/libseat.yml
 
-  - name: gamescope
-    config-opts:
-      - --wrap-mode=nodownload
-    build-options:
-      libdir: lib/x86_64-linux-gnu
-    buildsystem: meson
-    sources:
-      - type: git
-        url: https://github.com/ValveSoftware/gamescope.git
-        tag: 3.11.51
-        commit: 7aef264dfcf81c5f303422d820b7e1ecf81568f3
-        x-checker-data:
-          type: git
-          tag-pattern: ^([\d.]+)$
-          is-main-source: true
-      - type: git
-        url: https://github.com/nothings/stb.git
-        branch: master
-        commit: 5736b15f7ea0ffb08dd38af21067c314d6a3aae9 # Should be updated when updating gamescope
-        dest: subprojects/stb
-      - type: shell
-        commands:
-          - install -t subprojects/stb subprojects/packagefiles/stb/*
+#  - name: gamescope
+#    config-opts:
+#      - --wrap-mode=nodownload
+#    build-options:
+#      libdir: lib/x86_64-linux-gnu
+#    buildsystem: meson
+#    sources:
+#      - type: git
+#        url: https://github.com/ValveSoftware/gamescope.git
+#        tag: 3.11.51
+#        commit: 7aef264dfcf81c5f303422d820b7e1ecf81568f3
+#        x-checker-data:
+#          type: git
+#          tag-pattern: ^([\d.]+)$
+#          is-main-source: true
+#      - type: git
+#        url: https://github.com/nothings/stb.git
+#        branch: master
+#        commit: 5736b15f7ea0ffb08dd38af21067c314d6a3aae9 # Should be updated when updating gamescope
+#        dest: subprojects/stb
+#      - type: shell
+#        commands:
+#          - install -t subprojects/stb subprojects/packagefiles/stb/*
 
   - name: metadata
     buildsystem: simple
